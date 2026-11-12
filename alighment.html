@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alignment Notes</title>
+        <meta charset="UTF-8">
+        <style>
+            button{
+                padding:20px;
+                margin-left:45%;
+            }
+            #box{
+                width:75px;
+                height:75px;
+                background-color:darkslategrey;
+                color:azure;
+                text-align:center;
+            }
+            #box-wrapper{
+                display:grid;
+                grid-template-columns: 1fr 200px 1fr;
+                gap: 5px;
+            }
+            #flex-wrapper{
+                display: none;
+                flex-direction: row;
+                justify-content:space-between;
+                flex-wrap: wrap;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Alignment Notes</h1>
+        <div id="box-wrapper">
+            <div id="box">
+                <p>Box 1</p>
+            </div>
+            <div id="box">
+                <p>Box 2</p>
+            </div>
+            <div id="box">
+                <p>Box 3</p>
+            </div>
+            <div id="box">
+                <p>Box 4</p>
+            </div>
+        </div>
+        <div id="flex-wrapper">
+            <div id="box">
+                <p>Box 1</p>
+            </div>
+            <div id="box">
+                <p>Box 2</p>
+            </div>
+            <div id="box">
+                <p>Box 3</p>
+            </div>
+            <div id="box">
+                <p>Box 4</p>
+            </div>
+        </div>
+        <input type="color" id="colorPicker">
+        <button onClick="color()">Click me</button>
+
+        <script> 
+            function color(){ 
+                let newColor = document. getElementById("colorPicker").value
+                document.getElementById("box").style.backgroundColor = newColor
+            }
+            function dissapear(){
+                document.getElementById
+                ("boxTwo").style.display = 'none'
+            }
+            function appear(){
+                document.getElementById("boxTwo").style.desplay = 'block'
+
+            }
+            function show(){
+                let element = document.getElementById("flex-wrapper")
+                if(element,style,display == "flex"){
+                    element.style.display= "none"
+                }else{
+                    element,style.display = "flex"
+                }
+            }
+
+        
+
+        </script>
+    </body>
+</html>
