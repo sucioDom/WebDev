@@ -25,6 +25,7 @@
     </head>
     <body>
         <h1>Thomas and friends</h1>
+        <img onmouseout="changeImage()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZQsdFD9Y-zaVZPggOrEhxuh4WULt7ENv1yFE9U8VWw&s=10" alt="engine cast" id="thomasandfriends"
          <ul>
             <li> Thomas the tank engine</li>
             <li> Edward</li>
@@ -50,7 +51,19 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzUFMsOYDT87JC0Q-Mrf0zMASTdYpLYL9lDVhVLa_xEvXlFEpHgFeymdA&s=10" alt="thomas and friends">
 
         </div>
+        <script>
+            let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2sBqeVswO4Cz96NBYJDN07qhGEBGCxDxbjuEoyMja8A&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWoS7xCnw2l2GSgUJzIU2BCTM1jYk954eHMR2oPkEH2Q&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQXNiObLeCV4SxsG62A1xeJ7ejTV_GM83n5ZSl8vrh9w&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9LBZgBDeMwlpx1YRXwYsw7Vn8nBV_tyqrQ8Fta5yb6Q&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZQsdFD9Y-zaVZPggOrEhxuh4WULt7ENv1yFE9U8VWw&s=10"]
+            let current = 0
+            function changeImage(){
+                current += 1
+                if (current > 3){
+                    current = 0
+                }
+                document.getElementById("thomasandfriends").src=images[current]
+            }
+        </script>
     </body>
+
 </html>            
 
  
