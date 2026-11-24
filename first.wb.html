@@ -21,6 +21,15 @@
         #flex-wrapper{
             display:flex
         }
+        button{
+            padding:20px;
+            margin:8px;
+            margin-left:50px;
+            color:crimson;
+        }
+        #trains2{
+            display:none;
+        }
         </style>
     </head>
     <body>
@@ -51,6 +60,11 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzUFMsOYDT87JC0Q-Mrf0zMASTdYpLYL9lDVhVLa_xEvXlFEpHgFeymdA&s=10" alt="thomas and friends">
 
         </div>
+        <div id="trains2">
+            <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Cj8ndv7mdbfP-gAxRNwCjXGyxVeaPGZrtOv-1UOx1A&s=10" alt="Model series">
+            <p>The first season of Thomas the Tank Engine & Friends originally aired in 1984 and introduced audiences to the fictinal Island of Sodor through the use of live-action scale model steam engines. Adapted by Britt Allcroft and David Mitton from the Rev. W. Awdry's classic Railway Series books, the 26-episode season was famously narrated by Ringo Starr in the UK (and later by George Carlin for US audiences). The stories establish the core railway cast—including Thomas, Edward, Henry, Gordon, James, Percy, and Toby—as they work under the watchful eye of Sir Topham Hatt. Throughout the season, the cheeky small tank engine Thomas learns  lessons about patience, teamwork, and responsibility, ultimately earning his own branch line and proving himself to be a "really useful engine".</p>
+        </div>
+        <button id="trains"onClick="show()">show more</button>
         <script>
             let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2sBqeVswO4Cz96NBYJDN07qhGEBGCxDxbjuEoyMja8A&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWoS7xCnw2l2GSgUJzIU2BCTM1jYk954eHMR2oPkEH2Q&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQXNiObLeCV4SxsG62A1xeJ7ejTV_GM83n5ZSl8vrh9w&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9LBZgBDeMwlpx1YRXwYsw7Vn8nBV_tyqrQ8Fta5yb6Q&s=10","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZQsdFD9Y-zaVZPggOrEhxuh4WULt7ENv1yFE9U8VWw&s=10"]
             let current = 0
@@ -60,6 +74,17 @@
                     current = 0
                 }
                 document.getElementById("thomasandfriends").src=images[current]
+            }
+            function show(){
+                let element=document.getElementById("trains2")
+                if(element.style.display=="block"){
+                    element.style.display ="none"
+                    document.getElementById("trains").innerHTML ="show more"
+                }
+                else{
+                    element.style.display="block"
+                    document.getElementById("trains").innerHTML="show less"
+                }
             }
         </script>
     </body>
